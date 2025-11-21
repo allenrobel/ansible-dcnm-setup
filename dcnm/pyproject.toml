@@ -239,6 +239,6 @@ mixin-class-rgx = ".*[Mm]ixin"
 allow-global-unused-variables = true
 callbacks = ["cb_", "_cb"]
 dummy-variables-rgx = "_+$|(_[a-zA-Z0-9_]*[a-zA-Z0-9]+?$)|dummy|^ignored_|^unused_"
-ignored-argument-names = ["_.*", "^ignored_", "^unused_"]
+ignored-argument-names = "_.*|^ignored_|^unused_"
 init-import = false
 redefining-builtins-modules = ["six.moves", "past.builtins", "future.builtins", "builtins", "io"]
