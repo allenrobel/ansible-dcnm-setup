@@ -4,4 +4,3 @@ export ANSIBLE_COLLECTIONS_PATH=$ANSIBLE_HOME/collections
 export ANSIBLE_ROLES_PATH=$ANSIBLE_COLLECTIONS_PATH/ansible_collections/cisco/dcnm/tests/integration/targets
 export ANSIBLE_LIBRARY=$ANSIBLE_COLLECTIONS_PATH/ansible_collections/cisco/dcnm/.venv/lib/python$PYTHON_VERSION/site-packages/ansible_collections
 export PYTHONPATH=.:$ANSIBLE_COLLECTIONS_PATH/cisco/dcnm/.venv/lib/python$PYTHON_VERSION/site-packages:$PYTHONPATH
-
