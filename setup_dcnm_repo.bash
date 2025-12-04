@@ -263,6 +263,21 @@ copy_configuration_files() {
     fi
     run_command cp "$source_env" "$target_env"
     log_success "Copied env file"
+
+    # Copy CLAUDE.md file
+    local source_file="$REPO_SETUP/dcnm/CLAUDE.md"
+    local target_file="$REPO_DCNM/env/CLAUDE.md"
+
+    if [ ! -f "$source_file" ]; then
+        log_error "Source file not found: $source_file"
+        exit 1
+    fi
+
+    if [ -f "$target_file" ]; then
+        log_info "$target_file file already exists, overwriting..."
+    fi
+    run_command cp "$source_file" "$target_file"
+    log_success "Copied $target_file"
 }
 
 install_uv() {

@@ -28,6 +28,7 @@ This repository manages setup for a **separate** target repository:
 ### Installation Flow
 
 The `setup_dcnm_repo.bash` script performs these steps:
+
 1. Checks that no virtual environment is active (exits if one is)
 2. Creates directory structure at `$HOME/repos/ansible/collections/ansible_collections/`
 3. Clones `ansible.netcommon` collection from ansible-collections/ansible.netcommon
@@ -80,6 +81,7 @@ pytest -k <module_name>  # e.g., pytest -k dcnm_fabric
 ### Code Quality Tools
 
 The DCNM repository uses these linters (configured in `dcnm/pyproject.toml`):
+
 - **black**: Code formatter (line-length: 160)
 - **isort**: Import sorter (profile: black, line_length: 160)
 - **mypy**: Static type checker (with pydantic plugin)
@@ -91,6 +93,7 @@ The DCNM repository uses these linters (configured in `dcnm/pyproject.toml`):
 ## Environment Variables
 
 When `env/env` is sourced in the DCNM repository:
+
 - `PYTHON_VERSION=3.11`
 - `ANSIBLE_HOME=$HOME/repos/ansible`
 - `ANSIBLE_COLLECTIONS_PATH=$ANSIBLE_HOME/collections`
